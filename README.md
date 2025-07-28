@@ -17,7 +17,7 @@ Extracts structured outlines from PDFs (title, H1, H2, H3) in JSON format.
 ```bash
 docker build --platform linux/amd64 -t heading-extractor:demo .
 docker run --rm \
-  -v $(pwd)/input:/app/input \
-  -v $(pwd)/output:/app/output \
+  -v $(pwd)/input:app/input \
+  -v $(pwd)/output:app/output \
   --network none \
   heading-extractor:demo

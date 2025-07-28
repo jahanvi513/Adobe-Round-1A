@@ -83,43 +83,6 @@ def batch_process(input_dir, output_dir):
 
 
 if __name__ == "__main__":
-    INPUT_DIR = "input"
-    OUTPUT_DIR = "output"
+    INPUT_DIR = "app/input"
+    OUTPUT_DIR = "app/output"
     batch_process(INPUT_DIR, OUTPUT_DIR)
-
-# import fitz  
-# import json
-# import os
-
-# def process_pdf(pdf_path):
-#     """
-#     A simple function to open a PDF and print its text content page by page.
-#     This is a starting point.
-#     """
-#     try:
-#         doc = fitz.open(pdf_path)
-#         print(f"Successfully opened {pdf_path}")
-#         print(f"The document has {doc.page_count} pages.")
-
-#         full_text = []
-#         for page_num in range(doc.page_count):
-#             page = doc.load_page(page_num)
-#             full_text.append(page.get_text())
-#             print(f"--- Page {page_num + 1} ---")
-#             print(full_text[page_num])
-
-#         doc.close()
-
-#     except Exception as e:
-#         print(f"Failed to process {pdf_path}. Error: {e}")
-
-
-# if __name__ == "__main__":
-#     # For now, let's assume a sample PDF is in the same folder
-#     # Later, we will adapt this to the required input/output folders
-#     sample_pdf_file = "sample.pdf" # Make sure you have a PDF with this name
-#     if os.path.exists(sample_pdf_file):
-#         process_pdf(sample_pdf_file)
-#     else:
-#         print(f"Error: The file '{sample_pdf_file}' was not found.")
-#         print("Please add a PDF named 'sample.pdf' to your project folder.")
